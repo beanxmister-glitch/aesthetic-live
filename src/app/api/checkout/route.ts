@@ -43,29 +43,8 @@ export async function POST(request: Request) {
   }
 }
 
-// Webhook handler for payment events
-export async function webhook(request: Request) {
-  const body = await request.text()
-  const sig = request.headers.get('stripe-signature')
-  
-  try {
-    const event = stripe.webhooks.constructEvent(
-      body,
-      sig || '',
-      process.env.STRIPE_WEBHOOK_SECRET || ''
-    )
-    
-    // Handle successful payment
-    if (event.type === 'checkout.session.completed') {
-      const session = event.data.object as any
-      
-      // Update order status in database
-      // In production: Update Prisma order status to 'paid'
-      console.log('Payment completed:', session.id)
-    }
-    
-    return Response.json({ received: true })
-  } catch (error: any) {
-    return Response.json({ error: error.message }, { status: 400 })
-  }
+// Webhook handler for payment events - NOT supported in static exports
+// export async function webhook(request: Request) { ... }
+export async function GET() {
+  return Response.json({ message: 'Static site - no webhooks available' })
 }

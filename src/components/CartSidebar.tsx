@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { useCartStore } from '@/lib/cart'
 
 export default function CartSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const { items, removeItem, updateQuantity, total } = useCartStore()
+  const { items, removeItem, updateQuantity, getTotal } = useCartStore()
+  const total = getTotal()
   
   if (!isOpen) return null
   
@@ -81,7 +82,7 @@ export default function CartSidebar({ isOpen, onClose }: { isOpen: boolean; onCl
           <div className="p-6 border-t">
             <div className="flex justify-between mb-4">
               <span className="font-medium">Subtotal</span>
-              <span className="font-medium">${total().toFixed(2)}</span>
+              <span className="font-medium">${total.toFixed(2)}</span>
             </div>
             <Link 
               href="/checkout"
