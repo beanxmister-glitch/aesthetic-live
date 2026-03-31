@@ -29,6 +29,33 @@ const products = [
     image: 'https://images.unsplash.com/photo-1513506003901-6e6ab2a9f417?w=800',
     category: 'Table Lamps'
   },
+  { 
+    id: '4', 
+    name: 'Asymmetrical Art Pendant', 
+    price: 219, 
+    compareAtPrice: 289,
+    description: 'Architectural lighting that doubles as modern art. Features brushed brass and frosted glass.',
+    image: 'https://images.unsplash.com/photo-1517992993132-836750371077?w=800',
+    category: 'Pendant Lights'
+  },
+  { 
+    id: '5', 
+    name: 'Soft Curve Wall Sconce', 
+    price: 129, 
+    compareAtPrice: 169,
+    description: 'Rounded edges and irregular surfaces create a residential, approachable luxury feel.',
+    image: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800',
+    category: 'Wall Lighting'
+  },
+  { 
+    id: '6', 
+    name: 'Nordic Linear Chandelier', 
+    price: 349, 
+    compareAtPrice: 499,
+    description: 'Sophisticated linear design offering perfectly diffused light for dining spaces.',
+    image: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800',
+    category: 'Chandeliers'
+  },
 ]
 
 export default function CatalogPage() {
