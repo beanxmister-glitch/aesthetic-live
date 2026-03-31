@@ -1,4 +1,4 @@
-// File: /root/.openclaw/workspace/ecommerce-clean/src/app/product/[id]/page.tsx
+// File: /root/.openclaw/workspace/ecommerce/src/app/product/[id]/page.tsx
 import * as entry from '../../../../../src/app/product/[id]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

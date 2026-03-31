@@ -15,8 +15,8 @@ export default function Header({ onCartClick }: { onCartClick: () => void }) {
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/#products" className="text-primary-600 hover:text-primary-900">
-            Shop
+          <Link href="/catalog" className="text-primary-600 hover:text-primary-900">
+            Catalog
           </Link>
           <Link href="/about" className="text-primary-600 hover:text-primary-900">
             About

@@ -1,4 +1,4 @@
-// File: /root/.openclaw/workspace/ecommerce-clean/src/app/api/orders/route.ts
+// File: /root/.openclaw/workspace/ecommerce/src/app/api/orders/route.ts
 import * as entry from '../../../../../src/app/api/orders/route.js'
 import type { NextRequest } from 'next/server.js'
 
